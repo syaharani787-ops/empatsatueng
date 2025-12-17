@@ -29,12 +29,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="id">
-      <body className={inter.className}>{children}</body>
+    <html lang="id" suppressHydrationWarning>
+      <head>
+        <meta name="facebook-domain-verification" content="goe7lo8307kq6fdgr1zns333rx0myr" />
+      </head>
+      <body
+        className={`${poppins.variable} ${montserrat.variable} antialiased bg-background text-foreground font-poppins`}
+      >
+        {children}
+        <Toaster />
+      </body>
     </html>
-  )
+  );
 }
