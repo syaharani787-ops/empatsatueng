@@ -37,12 +37,7 @@ export default function RootLayout({
       <head>
         <meta name="facebook-domain-verification" content="goe7lo8307kq6fdgr1zns333rx0myr" />
       </head>
-      <body
-        className={`${poppins.variable} ${montserrat.variable} antialiased bg-background text-foreground font-poppins`}
-      >
-        {children}
-        <Toaster />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
